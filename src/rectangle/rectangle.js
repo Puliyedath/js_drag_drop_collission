@@ -64,6 +64,8 @@ function resizeRectangle(event) {
     [].map.call(centers, function(center){
         if (doesCollide(rect, center)) {
             center.classList.add('shaded');
+        }else{
+            center.classList.remove('shaded');
         }
     });
 
