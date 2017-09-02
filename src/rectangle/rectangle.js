@@ -71,6 +71,11 @@ function resizeRectangle(event) {
 
 }
 
+/*
+  * The reason el2.getBoundingClientRect is used since the squares
+  * inside the big square would have offset top and left as zero since
+  * thery are calculated based on the immediate parent
+*/
 function doesCollide(el1, el2){
     el1.offsetBottom = el1.offsetTop + el1.offsetHeight;
     el1.offsetRight = el1.offsetLeft + el1.offsetWidth;
