@@ -3,9 +3,10 @@ js_entry = src/entry.js
 bundle_js = public/bundle.js
 src = ./src
 
-build: buildjs
+build: 
+	make ${bundle_js}
 
-buildjs : $(js_files)
+${bundle_js}: $(js_files)
 	browserify -e $(js_entry) -o $(bundle_js)
 
 startServer:
